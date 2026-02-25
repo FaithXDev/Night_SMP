@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Navbar from './components/Navbar';
 import HomePage from './components/HomePage';
 import CategoryPage from './components/CategoryPage';
+import TicketPage from './components/TicketPage';
 import Footer from './components/Footer';
 import Toast from './components/Toast';
 import ProductModal from './components/ProductModal';
@@ -25,12 +26,45 @@ function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const navigateToTicket = () => {
+    setCurrentPage({ type: 'ticket' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const handleViewDetails = (product) => {
     setModalProduct(product);
   };
 
   const handlePurchase = (product) => {
     setModalProduct(product);
+  };
+
+  const renderPage = () => {
+    switch (currentPage.type) {
+      case 'category':
+        return (
+          <CategoryPage
+            category={currentPage.category}
+            onBack={navigateHome}
+            onViewDetails={handleViewDetails}
+            onPurchase={handlePurchase}
+          />
+        );
+      case 'ticket':
+        return (
+          <TicketPage
+            onBack={navigateHome}
+            onToast={showToast}
+          />
+        );
+      default:
+        return (
+          <HomePage
+            onSelectCategory={navigateToCategory}
+            onToast={showToast}
+          />
+        );
+    }
   };
 
   return (
@@ -41,21 +75,9 @@ function App() {
         onNavigateCategory={navigateToCategory}
       />
 
-      {currentPage.type === 'home' ? (
-        <HomePage
-          onSelectCategory={navigateToCategory}
-          onToast={showToast}
-        />
-      ) : (
-        <CategoryPage
-          category={currentPage.category}
-          onBack={navigateHome}
-          onViewDetails={handleViewDetails}
-          onPurchase={handlePurchase}
-        />
-      )}
+      {renderPage()}
 
-      <Footer />
+      <Footer onNavigateTicket={navigateToTicket} />
 
       <Toast
         message={toast.message}
