@@ -1007,6 +1007,7 @@ img {
   flex: 1;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -2652,6 +2653,7 @@ img {
   flex: 1;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -2785,6 +2787,7 @@ img {
   .catpage-card__desc {
     font-size: 0.62rem;
     -webkit-line-clamp: 1;
+    line-clamp: 1;
     margin-bottom: 8px;
   }
 
@@ -2796,5 +2799,81 @@ img {
   .catpage-card__buy {
     padding: 6px 14px;
     font-size: 0.6rem;
+  }
+}
+
+/* ======================== NAVBAR MOBILE MENU ======================== */
+@media (max-width: 768px) {
+  .navbar__links.navbar__links--open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background: var(--bg-nav);
+    padding: 20px;
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+    border-radius: 0 0 var(--radius) var(--radius);
+    gap: 10px;
+    align-items: stretch;
+    transform: none;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.15s ease-out;
+  }
+
+  .navbar__links.navbar__links--open .navbar__link {
+    text-align: center;
+    padding: 14px;
+    font-size: 1rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .navbar__links.navbar__links--open .navbar__link--active {
+    background: rgba(218, 165, 32, 0.15);
+    color: var(--accent-gold-bright);
+    font-weight: 800;
+  }
+}
+
+/* ======================== EXTRA SMALL MOBILE ======================== */
+@media (max-width: 480px) {
+
+  /* Fix 2-column grids on extremely small screens */
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .catpage__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__grid {
+    gap: 20px;
+    text-align: center;
+  }
+
+  .hero-section__title-white {
+    font-size: 1.8rem;
+  }
+
+  .hero-section__title-glow {
+    font-size: 2.8rem;
+  }
+
+  .hero-section__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-section__cta {
+    width: 100%;
+    justify-content: center;
   }
 }

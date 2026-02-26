@@ -9,6 +9,7 @@ const navCategories = [
 ];
 
 export default function Navbar({ currentPage, onNavigateHome, onNavigateCategory }) {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [onlineCount] = useState(() => {
         const SESSION_MS = 20 * 60 * 1000; // 20 minutes
         try {
@@ -29,20 +30,35 @@ export default function Navbar({ currentPage, onNavigateHome, onNavigateCategory
                 <span className="navbar__logo-text"><span className="navbar__logo-night">NIGHT</span> STORE</span>
             </a>
 
-            <button className="navbar__menu-btn" id="menu-toggle" aria-label="Menu">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                    <line x1="3" y1="6" x2="21" y2="6" />
-                    <line x1="3" y1="12" x2="21" y2="12" />
-                    <line x1="3" y1="18" x2="21" y2="18" />
-                </svg>
+            <button
+                className={`navbar__menu-btn ${isMenuOpen ? 'navbar__menu-btn--open' : ''}`}
+                id="menu-toggle"
+                aria-label="Menu"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+                {isMenuOpen ? (
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                ) : (
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <line x1="3" y1="12" x2="21" y2="12" />
+                        <line x1="3" y1="18" x2="21" y2="18" />
+                    </svg>
+                )}
             </button>
 
-            <div className="navbar__links">
+            <div className={`navbar__links ${isMenuOpen ? 'navbar__links--open' : ''}`}>
                 {navCategories.map((cat) => (
                     <button
                         key={cat.id}
                         className={`navbar__link${currentPage?.type === 'category' && currentPage.category === cat.id ? ' navbar__link--active' : ''}`}
-                        onClick={() => onNavigateCategory?.(cat.id)}
+                        onClick={() => {
+                            onNavigateCategory?.(cat.id);
+                            setIsMenuOpen(false);
+                        }}
                         id={`nav-${cat.id}`}
                     >
                         {cat.label}
