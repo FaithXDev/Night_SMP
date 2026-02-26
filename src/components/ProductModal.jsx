@@ -35,7 +35,7 @@ export default function ProductModal({ product, onClose }) {
                     </div>
                     <button
                         className="btn btn--buy modal__buy-btn"
-                        onClick={() => window.open('https://discord.gg/', '_blank')}
+                        onClick={() => window.open('https://discord.gg/uuTE4dYenB', '_blank')}
                     >
                         Buy via Discord
                     </button>

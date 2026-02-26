@@ -32,7 +32,7 @@ export default function Footer({ onNavigateTicket }) {
 
                     <div className="footer__col">
                         <h4 className="footer__col-title">Community</h4>
-                        <a href="https://discord.gg/" target="_blank" rel="noopener noreferrer" className="footer__link">Discord</a>
+                        <a href="https://discord.gg/uuTE4dYenB" target="_blank" rel="noopener noreferrer" className="footer__link">Discord</a>
                         <button
                             className="footer__link footer__link--btn"
                             onClick={() => setRulesOpen(true)}

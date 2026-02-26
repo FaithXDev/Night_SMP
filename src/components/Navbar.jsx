@@ -72,7 +72,7 @@ export default function Navbar({ currentPage, onNavigateHome, onNavigateCategory
                     <span className="navbar__online-text">{onlineCount} Online</span>
                 </div>
                 <a
-                    href="https://discord.gg/"
+                    href="https://discord.gg/uuTE4dYenB"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="navbar__discord"

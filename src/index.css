@@ -2563,7 +2563,7 @@ img {
   background: var(--bg-card);
   border: 1px solid var(--border-card);
   border-radius: var(--radius);
-  padding: 24px 14px 18px;
+  padding: 36px 14px 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2608,13 +2608,10 @@ img {
   text-align: center;
 }
 
-.catpage-card--best {
-  padding-top: 36px;
-}
-
 /* Icon area */
 .catpage-card__icon-area {
   width: 100%;
+  height: 160px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2661,11 +2658,6 @@ img {
   line-height: 1.5;
   margin-bottom: 12px;
   flex: 1;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 /* Price */
@@ -2778,7 +2770,7 @@ img {
   }
 
   .catpage-card {
-    padding: 20px 10px 14px;
+    padding: 28px 10px 14px;
   }
 
   .catpage-card__icon-area {
@@ -2796,8 +2788,6 @@ img {
 
   .catpage-card__desc {
     font-size: 0.62rem;
-    -webkit-line-clamp: 1;
-    line-clamp: 1;
     margin-bottom: 8px;
   }
 

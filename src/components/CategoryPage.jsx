@@ -114,7 +114,7 @@ export default function CategoryPage({ category, onBack, onViewDetails, onPurcha
                     <h2 className="catpage__section-title">Need help?</h2>
                     <p className="catpage__section-text">
                         If you have any questions or issues related to payments,{' '}
-                        <a href="https://discord.gg/" target="_blank" rel="noopener noreferrer" className="catpage__link">
+                        <a href="https://discord.gg/uuTE4dYenB" target="_blank" rel="noopener noreferrer" className="catpage__link">
                             open a ticket in our Discord
                         </a>
                         , and we will reply as fast as possible.

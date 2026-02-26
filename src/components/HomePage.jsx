@@ -143,7 +143,7 @@ export default function HomePage({ onSelectCategory, onToast }) {
                             Browse Store
                         </button>
                         <a
-                            href="https://discord.gg/"
+                            href="https://discord.gg/uuTE4dYenB"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="hero-section__cta hero-section__cta--secondary"
@@ -243,7 +243,7 @@ export default function HomePage({ onSelectCategory, onToast }) {
                     <h2 className="home__section-title">Need help?</h2>
                     <p className="home__section-text">
                         If you have any questions or issues related to payments,{' '}
-                        <a href="https://discord.gg/" target="_blank" rel="noopener noreferrer" className="home__link">
+                        <a href="https://discord.gg/uuTE4dYenB" target="_blank" rel="noopener noreferrer" className="home__link">
                             open a ticket in our Discord
                         </a>
                         , and we will reply as fast as possible.

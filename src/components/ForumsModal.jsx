@@ -39,7 +39,7 @@ export default function ForumsModal({ open, onClose }) {
                             </li>
                         </ul>
                         <a
-                            href="https://discord.gg/"
+                            href="https://discord.gg/uuTE4dYenB"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="rules-modal__action-btn"
