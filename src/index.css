@@ -1503,11 +1503,17 @@ img {
 .footer__link {
   display: block;
   width: 100%;
-  text-align: inherit;
+  text-align: center;
   font-size: 0.78rem;
   color: var(--text-muted);
   padding: 3px 0;
   transition: color 0.2s;
+}
+
+@media (min-width: 768px) {
+  .footer__link {
+    text-align: left;
+  }
 }
 
 .footer__link:hover {
