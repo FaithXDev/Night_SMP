@@ -1,28 +1,33 @@
 import { useState, useEffect, useRef } from 'react';
 
+import ranksIcon from '../assets/HomeIcons/ranks.png';
+import kitsIcon from '../assets/HomeIcons/kits.png';
+import cratesIcon from '../assets/HomeIcons/crates.png';
+import coinsIcon from '../assets/HomeIcons/coins.png';
+
 const categories = [
     {
         id: 'rank',
-        name: 'Ranks',
-        icon: '👑',
+        // name: 'Ranks',
+        image: ranksIcon,
         description: 'Unlock exclusive perks, commands, and cosmetics with premium server ranks.',
     },
     {
         id: 'kit',
-        name: 'Kits',
-        icon: '⚔️',
+        // name: 'Kits',
+        image: kitsIcon,
         description: 'Start strong with powerful loadouts — tools, armor, food, and more.',
     },
     {
         id: 'crate',
-        name: 'Crates',
-        icon: '🎁',
+        // name: 'Crates',
+        image: cratesIcon,
         description: 'Try your luck with mystery crates filled with rare loot and rewards.',
     },
     {
         id: 'coin',
-        name: 'Coins',
-        icon: '🪙',
+        // name: 'Coins',
+        image: coinsIcon,
         description: 'Purchase in-game currency for use in the server store.',
     },
 ];
@@ -199,7 +204,9 @@ export default function HomePage({ onSelectCategory, onToast }) {
                             style={{ animationDelay: `${i * 100}ms` }}
                         >
                             <div className="category-card__glow" />
-                            <div className="category-card__icon">{cat.icon}</div>
+                            <div className="category-card__icon">
+                                <img src={cat.image} alt={cat.name} className="category-card__icon-img" />
+                            </div>
                             <span className="category-card__name">{cat.name}</span>
                             <span className="category-card__desc">{cat.description}</span>
                         </button>
