@@ -1450,11 +1450,13 @@ img {
   background: var(--bg-footer);
   border-top: 1px solid var(--border-subtle);
   padding: 48px 20px 20px;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
   .footer {
     padding: 56px 40px 24px;
+    text-align: left;
   }
 }
 
@@ -1500,6 +1502,8 @@ img {
 
 .footer__link {
   display: block;
+  width: 100%;
+  text-align: inherit;
   font-size: 0.78rem;
   color: var(--text-muted);
   padding: 3px 0;
