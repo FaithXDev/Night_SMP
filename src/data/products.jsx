@@ -19,7 +19,7 @@ import deadliestKitImg from '../assets/Kits/deadliest_kit.png';
 
 // Crate images from assets
 import soulCrateImg from '../assets/Crates/soul_crate.png';
-import legendaryCrateImg from '../assets/Crates/Legendary_crate.png';
+import legendaryCrateImg from '../assets/Crates/legendary_crate.png';
 import deadliestCrateImg from '../assets/Crates/deadliest_crate.png';
 import mythicCrateImg from '../assets/Crates/mythic_crate.png';
 
