@@ -3,7 +3,7 @@ import './Navbar.css';
 
 const navCategories = [
     { id: 'rank', label: 'Ranks' },
-    { id: 'kit', label: 'Kits' },
+    // { id: 'kit', label: 'Kits' },
     { id: 'crate', label: 'Crates' },
     { id: 'coin', label: 'Coins' },
 ];

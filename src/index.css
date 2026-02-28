@@ -2270,7 +2270,8 @@ img {
 
 @media (min-width: 900px) {
   .home__grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, minmax(240px, 280px));
+    justify-content: center;
     gap: 18px;
   }
 }

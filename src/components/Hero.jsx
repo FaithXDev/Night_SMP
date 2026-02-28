@@ -5,7 +5,7 @@ export default function Hero({ onToast }) {
     const [copied, setCopied] = useState(false);
 
     const handleCopy = () => {
-        navigator.clipboard.writeText('NIGHTSMP.hexonode.fun:25927');
+        navigator.clipboard.writeText('amd.anuverse.fun:23456');
         setCopied(true);
         onToast?.('IP Copied to clipboard!');
         setTimeout(() => setCopied(false), 2000);
@@ -46,7 +46,7 @@ export default function Hero({ onToast }) {
                     <div className="hero__server-dot" />
                     <div className="hero__server-text">
                         <span className="hero__server-label">Server IP</span>
-                        <span className="hero__server-address">NIGHTSMP.hexonode.fun</span>
+                        <span className="hero__server-address">amd.anuverse.fun</span>
                     </div>
                 </div>
                 <div className="hero__server-copy">

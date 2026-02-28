@@ -12,12 +12,12 @@ const categories = [
         image: ranksIcon,
         description: 'Unlock exclusive perks, commands, and cosmetics with premium server ranks.',
     },
-    {
-        id: 'kit',
-        // name: 'Kits',
-        image: kitsIcon,
-        description: 'Start strong with powerful loadouts — tools, armor, food, and more.',
-    },
+    // {
+    //     id: 'kit',
+    //     // name: 'Kits',
+    //     image: kitsIcon,
+    //     description: 'Start strong with powerful loadouts — tools, armor, food, and more.',
+    // },
     {
         id: 'crate',
         // name: 'Crates',
@@ -51,7 +51,7 @@ export default function HomePage({ onSelectCategory, onToast }) {
     const heroRef = useRef(null);
 
     const handleCopy = () => {
-        navigator.clipboard.writeText('NIGHTSMP.hexonode.fun:25927');
+        navigator.clipboard.writeText('amd.anuverse.fun:23456');
         setCopied(true);
         onToast?.('IP Copied Successfully');
         setTimeout(() => setCopied(false), 2000);
@@ -163,7 +163,7 @@ export default function HomePage({ onSelectCategory, onToast }) {
                         </div>
                         <div className="hero-section__ip-main">
                             <span className="hero-section__ip-label">SERVER IP</span>
-                            <span className="hero-section__ip-address">NIGHTSMP.hexonode.fun</span>
+                            <span className="hero-section__ip-address">amd.anuverse.fun</span>
                         </div>
                         <div className="hero-section__ip-copy-btn">
                             {copied ? (
